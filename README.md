@@ -1,0 +1,10 @@
+# urllib
+__author__ = 'Balint'
+import urllib.request
+
+x = urllib.request.urlopen('http://www.google.com')
+print('HTML kód beolvasása...')
+with open ('fajl2.txt', 'w') as f:
+    for line in x:
+        f.write(''.join((str(x.read()))))
+    print('Honlap beolvasva.')
